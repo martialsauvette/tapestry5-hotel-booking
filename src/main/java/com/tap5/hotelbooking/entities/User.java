@@ -47,14 +47,14 @@ public class User
     @Size(min = 3, max = 15)
     private String username;
 
-    @Column(nullable = false)
-    @NotNull
-    @Size(min = 3, max = 50)
+    @Column(nullable = true)
+//    @NotNull
+//    @Size(min = 3, max = 50)
     private String fullname;
 
-    @Column(nullable = false)
-    @NotNull
-    @Email
+    @Column(nullable = true)
+//    @NotNull
+//    @Email
     private String email;
 
     @Column(nullable = false)

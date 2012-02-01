@@ -66,15 +66,6 @@
 				</tr>
 				<tr>
 					<th>
-						<label t:type="label" t:for="creditCardType">Credit Card Type</label>
-					</th>
-					<td>
-						<select t:type="select" t:id="creditCardType" t:value="booking.creditCardType">
-						</select>
-					</td>	
-				</tr>
-				<tr>
-					<th>
 						<label t:type="label" t:for="creditCardName">Credit Card Name</label>
 					</th>
 					<td>
@@ -93,7 +84,7 @@
 				</tr>				
 			</table>
 			<div class="form-submit">
-				<input type="submit" class="btn-active" value="Book" /> or <a href="#" t:type="eventlink" t:event="cancelBooking">Cancel</a>
+				<input type="submit" class="btn-active" value="Proceed" /> or <a href="#" t:type="eventlink" t:event="cancelBooking">Cancel</a>
 			</div>
 		</form>
 	</t:block>

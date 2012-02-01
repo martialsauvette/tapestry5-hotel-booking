@@ -57,7 +57,7 @@ public class Booking implements Serializable
 
     private String creditCardNumber;
 
-    private CreditCardType creditCardType;
+//    private CreditCardType creditCardType;
 
     private String creditCardName;
 
@@ -185,17 +185,17 @@ public class Booking implements Serializable
         this.creditCardNumber = creditCardNumber;
     }
 
-    @NotNull(message = "Credit card type is required")
-    @Enumerated(EnumType.STRING)
-    public CreditCardType getCreditCardType()
-    {
-        return creditCardType;
-    }
-
-    public void setCreditCardType(CreditCardType creditCardType)
-    {
-        this.creditCardType = creditCardType;
-    }
+//    @NotNull(message = "Credit card type is required")
+//    @Enumerated(EnumType.STRING)
+//    public CreditCardType getCreditCardType()
+//    {
+//        return creditCardType;
+//    }
+//
+//    public void setCreditCardType(CreditCardType creditCardType)
+//    {
+//        this.creditCardType = creditCardType;
+//    }
 
     @NotNull(message = "Credit card name is required")
     @Size(min = 3, max = 70, message = "Credit card name is required")

@@ -14,7 +14,7 @@
 	<form t:type="form" class="full-form" t:id="startBookingForm" t:context="hotel">
    		
 		<div class="form-submit">
-			<input type="submit" class="btn-active" value="Book this Hotel" /> or 
+			<input type="submit" class="btn-active" value="Book Hotel" /> or 
 			<a href="#" t:type="pagelink" t:page="search">Back to search</a>
 		</div>
 

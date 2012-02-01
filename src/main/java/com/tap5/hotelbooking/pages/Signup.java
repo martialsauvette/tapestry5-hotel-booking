@@ -31,11 +31,11 @@ public class Signup
     private String username;
 
     @Property
-    @Validate("required, minlength=3, maxlength=50")
+//    @Validate("required, minlength=3, maxlength=50")
     private String fullName;
 
     @Property
-    @Validate("required,email")
+//    @Validate("required,email")
     private String email;
 
     @Property
@@ -46,9 +46,9 @@ public class Signup
     @Validate("password")
     private String verifyPassword;
 
-    @SuppressWarnings("unused")
-    @Property
-    private String kaptcha;
+//    @SuppressWarnings("unused")
+//    @Property
+//    private String kaptcha;
 
     @Inject
     private CrudServiceDAO crudServiceDAO;

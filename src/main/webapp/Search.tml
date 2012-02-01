@@ -4,7 +4,7 @@
 
 	<h2>Search an Hotel</h2>
 
-	<form t:type="form" t:zone="result" t:id="searchForm" class="full-form" >
+	<form t:type="form" t:id="searchForm" class="full-form" >
 		<table>
 			<tr>
 				<th>
@@ -18,15 +18,14 @@
 			</tr>
 		</table>
 		<div class="form-submit">
-			<input type="submit" t:type="submit" class="btn-active" value="Search" /> or <a href="#">cancel</a>
-			<span t:type="ajaxloader" t:trigger="searchForm" t:zone="result"></span>
+			<input type="submit" t:type="submit" class="btn-active" value="Find Hotels" /> or <a href="#">cancel</a>
 		</div>
 	</form>
 
 	<!-- Result area -->
-	<div t:type="zone" t:id="result" id="result" class="section result">
+	<div id="result" class="section result">
 		<table t:type="grid" t:source="source" t:inPlace="true" t:rowsPerPage="criteria.rowsPerPage" t:include="name,address,zip" t:add="cityState,action" t:row="currentHotel">
-			<p:actionCell><a href="#" t:type="pagelink" t:context="currentHotel" t:page="view">Details</a></p:actionCell>
+			<p:actionCell><a href="#" t:type="pagelink" t:context="currentHotel" t:page="view">View Hotel</a></p:actionCell>
 			<p:cityStateCell>${currentHotel.city}, ${currentHotel.state}</p:cityStateCell>
 			<p:empty>
 				<p class="empty-result">${message:no-result}</p>
@@ -34,7 +33,7 @@
 		</table>
 	</div>
 
-	<t:yourBookings />
+	<!-- t:yourBookings / -->
 
 	 
 	<t:workspace />

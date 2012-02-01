@@ -26,8 +26,8 @@ public class Search
     @Inject
     private Session session;
 
-    @InjectComponent
-    private Zone result;
+//    @InjectComponent
+//    private Zone result;
 
     @SessionState
     @Property
@@ -72,12 +72,14 @@ public class Search
     @OnEvent(value = EventConstants.SUCCESS)
     Object searchHotels()
     {
-        return result.getBody();
+        source =new HotelDataSource(session, Hotel.class);
+        return this;
     }
     
     Object onAction()
     {
-        return result.getBody();
+        source =new HotelDataSource(session, Hotel.class);
+        return this;
     }
 
 }
