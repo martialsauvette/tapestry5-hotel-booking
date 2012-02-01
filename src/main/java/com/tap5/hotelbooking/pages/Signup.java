@@ -80,8 +80,8 @@ public class Signup
     {
 
         User userVerif = crudServiceDAO.findUniqueWithNamedQuery(
-                User.BY_USERNAME_OR_EMAIL,
-                QueryParameters.with("username", username).and("email", email).parameters());
+                User.BY_USERNAME,
+                QueryParameters.with("username", username).parameters());
 
         if (userVerif != null)
         {
@@ -90,7 +90,7 @@ public class Signup
             return null;
         }
 
-        User user = new User(fullName, username, email, password);
+        User user = new User(fullName, username, password);
 
         crudServiceDAO.create(user);
 

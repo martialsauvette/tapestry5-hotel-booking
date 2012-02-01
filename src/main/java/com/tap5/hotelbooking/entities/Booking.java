@@ -7,10 +7,9 @@ import java.math.BigDecimal;
 import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
@@ -24,6 +23,15 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import org.apache.tapestry5.SelectModel;
+import org.apache.tapestry5.ValueEncoder;
+import org.apache.tapestry5.annotations.Persist;
+import org.apache.tapestry5.annotations.Property;
+import org.apache.tapestry5.ioc.Messages;
+import org.apache.tapestry5.ioc.annotations.Inject;
+import org.apache.tapestry5.util.EnumSelectModel;
+import org.apache.tapestry5.util.EnumValueEncoder;
+
 /**
  * <p>
  * <strong>Booking</strong> is the model/entity class that represents a hotel booking.
@@ -35,7 +43,7 @@ import javax.validation.constraints.Size;
 @Entity
 @NamedQueries(
 { @NamedQuery(name = Booking.BY_USERNAME, query = "Select b from Booking b where b.user.username = :username") })
-@Table(name = "bookings")
+@Table(name = "Booking")
 public class Booking implements Serializable
 {
     /**
@@ -196,7 +204,7 @@ public class Booking implements Serializable
 //    {
 //        this.creditCardType = creditCardType;
 //    }
-
+    
     @NotNull(message = "Credit card name is required")
     @Size(min = 3, max = 70, message = "Credit card name is required")
     public String getCreditCardName()
@@ -308,4 +316,5 @@ public class Booking implements Serializable
     {
         return "Booking(" + user + ", " + hotel + ")";
     }
+
 }

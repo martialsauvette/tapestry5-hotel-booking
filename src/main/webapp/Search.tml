@@ -33,7 +33,7 @@
 		</table>
 	</div>
 
-	<!-- t:yourBookings / -->
+	<t:yourBookings />
 
 	 
 	<t:workspace />

@@ -41,6 +41,9 @@ public class YourBookings
     @SetupRender
     boolean listBookings()
     {
+    	if(!authenticator.isLoggedIn()){
+    		return false;
+    	}
         bookings = crudDao.findWithNamedQuery(
                 Booking.BY_USERNAME,
                 QueryParameters.with("username", authenticator.getLoggedUser().getUsername())

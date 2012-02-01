@@ -25,7 +25,7 @@ import org.hibernate.annotations.NaturalId;
  * @author Dan Allen
  */
 @Entity
-@Table(name = "hotel")
+@Table(name = "Hotel")
 public class Hotel implements Serializable
 {
     /**
@@ -49,7 +49,7 @@ public class Hotel implements Serializable
 
     private String country;
 
-    private Integer stars;
+//    private Integer stars;
 
     private BigDecimal price;
 
@@ -68,11 +68,11 @@ public class Hotel implements Serializable
         this.country = country;
     }
 
-    public Hotel(final int price, final int stars, final String name, final String address,
+    public Hotel(final int price, /*final int stars,*/ final String name, final String address,
             final String city, final String state, final String zip, final String country)
     {
         this.price = new BigDecimal(price);
-        this.stars = stars;
+        //this.stars = stars;
         this.name = name;
         this.address = address;
         this.city = city;
@@ -164,17 +164,17 @@ public class Hotel implements Serializable
         this.country = country;
     }
 
-    @Min(1)
-    @Max(5)
-    public Integer getStars()
-    {
-        return stars;
-    }
-
-    public void setStars(final Integer stars)
-    {
-        this.stars = stars;
-    }
+//    @Min(1)
+//    @Max(5)
+//    public Integer getStars()
+//    {
+//        return stars;
+//    }
+//
+//    public void setStars(final Integer stars)
+//    {
+//        this.stars = stars;
+//    }
 
     @Column(precision = 6, scale = 2)
     public BigDecimal getPrice()

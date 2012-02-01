@@ -23,15 +23,15 @@ import org.hibernate.validator.constraints.Email;
 @NamedQueries(
 {
         @NamedQuery(name = User.ALL, query = "Select u from User u"),
-        @NamedQuery(name = User.BY_USERNAME_OR_EMAIL, query = "Select u from User u where u.username = :username or u.email = :email"),
+        @NamedQuery(name = User.BY_USERNAME, query = "Select u from User u where u.username = :username"),
         @NamedQuery(name = User.BY_CREDENTIALS, query = "Select u from User u where u.username = :username and u.password = :password") })
-@Table(name = "users")
+@Table(name = "Customer")
 public class User
 {
 
     public static final String ALL = "User.all";
 
-    public static final String BY_USERNAME_OR_EMAIL = "User.byUserNameOrEmail";
+    public static final String BY_USERNAME = "User.byUserName";
 
     public static final String BY_CREDENTIALS = "User.byCredentials";
 
@@ -50,12 +50,12 @@ public class User
     @Column(nullable = true)
 //    @NotNull
 //    @Size(min = 3, max = 50)
-    private String fullname;
+    private String name;
 
-    @Column(nullable = true)
+//    @Column(nullable = true)
 //    @NotNull
 //    @Email
-    private String email;
+//    private String email;
 
     @Column(nullable = false)
     @Size(min = 3, max = 12)
@@ -68,9 +68,9 @@ public class User
 
     public User(final String fullname, final String username, final String email)
     {
-        this.fullname = fullname;
+        this.name = fullname;
         this.username = username;
-        this.email = email;
+//        this.email = email;
     }
 
     public User(final String fullname, final String username, final String email,
@@ -80,15 +80,15 @@ public class User
         this.password = password;
     }
 
-    public User(Long id, String username, String fullname, String email, String password)
-    {
-        super();
-        this.id = id;
-        this.username = username;
-        this.fullname = fullname;
-        this.email = email;
-        this.password = password;
-    }
+//    public User(Long id, String username, String fullname, String email, String password)
+//    {
+//        super();
+//        this.id = id;
+//        this.username = username;
+//        this.name = fullname;
+//        this.email = email;
+//        this.password = password;
+//    }
 
     @Override
     public String toString()
@@ -112,15 +112,15 @@ public class User
         this.id = id;
     }
 
-    public String getEmail()
-    {
-        return email;
-    }
-
-    public void setEmail(String email)
-    {
-        this.email = email;
-    }
+//    public String getEmail()
+//    {
+//        return email;
+//    }
+//
+//    public void setEmail(String email)
+//    {
+//        this.email = email;
+//    }
 
     public String getUsername()
     {
@@ -134,12 +134,12 @@ public class User
 
     public void setFullname(String fullname)
     {
-        this.fullname = fullname;
+        this.name = fullname;
     }
 
     public String getFullname()
     {
-        return fullname;
+        return name;
     }
 
     public String getPassword()
