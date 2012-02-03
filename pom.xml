@@ -83,16 +83,7 @@
 			<version>2.5</version>
 			<scope>provided</scope>
 		</dependency>
-
-		<!-- 
-			Tapx Core : include kaptcha component
-		-->
-		<dependency>
-			<groupId>com.howardlewisship</groupId>
-			<artifactId>tapx-core</artifactId>
-			<version>${tapx-release-version}</version>
-		</dependency>
-		
+	
 		<dependency>
 			<groupId>org.hibernate.javax.persistence</groupId>
 			<artifactId>hibernate-jpa-2.0-api</artifactId>
@@ -197,15 +188,7 @@
 		<repository>
 			<id>apache</id>
 			<url>https://repository.apache.org/content/groups/public/</url>
-		</repository>
-		<repository>
-			<id>tapestry360-stable</id>
-			<url>http://tapestry.formos.com/maven-repository</url>
-		</repository>
-		<repository>
-			<id>tapestry360-snapshot</id>
-			<url>http://tapestry.formos.com/maven-snapshot-repository</url>
-		</repository>
+		</repository>		
 	</repositories>
 
 	<properties>
