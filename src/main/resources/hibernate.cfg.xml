@@ -14,11 +14,11 @@
 <!--     </session-factory> -->
     <session-factory>
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/tapestry5tagsobe</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/tagsobe</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="hibernate.connection.username">tagsobe</property>
         <property name="hibernate.connection.password">tagsobe</property>
-        <property name="hbm2ddl.auto">create-drop</property>
+        <property name="hbm2ddl.auto">update</property>
         <property name="hibernate.show_sql">false</property>
         <property name="hibernate.format_sql">false</property>
     </session-factory>
