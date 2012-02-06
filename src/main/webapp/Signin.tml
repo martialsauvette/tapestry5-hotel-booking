@@ -21,7 +21,7 @@
 		</table>
 		
 		<div class="form-submit">
-			<input type="submit" value="Login" />
+			<input type="submit" value="Account Login" />
 		</div>
 		
 		<div class="member">Not a member yet? <t:pagelink page="SignUp">Register now!</t:pagelink></div>

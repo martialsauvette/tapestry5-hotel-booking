@@ -74,9 +74,9 @@
 						<label t:type="label" t:for="creditCardExpiryYear">Expiracy</label>
 					</th>
 					<td class="inline">
-						<select t:type="select" t:id="creditCardExpiryYear" t:value="booking.creditCardExpiryYear" t:model="years"></select>
-						&nbsp;
 						<select t:type="select" t:id="creditCardExpiryMonth" t:value="booking.creditCardExpiryMonth" t:model="months"></select>
+						&nbsp;
+						<select t:type="select" t:id="creditCardExpiryYear" t:value="booking.creditCardExpiryYear" t:model="years"></select>
 					</td>	
 				</tr>				
 			</table>
