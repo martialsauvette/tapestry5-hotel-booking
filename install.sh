@@ -51,7 +51,7 @@ java -jar tagsobe.jar http://localhost:8080/tapestry5-hotel-booking/signin | tee
 
 sudo service tomcat6 stop
 
-mail -s "tagsobe result" sauvette@objectcode.de <  ~/log/run.log
+mail -s "tagsobe result" sauvette@objectcode.de,viola@objectcode.de <  ~/log/run.log
 
 
 cd
