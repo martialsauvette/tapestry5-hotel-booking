@@ -42,8 +42,17 @@ sudo service tomcat6 start
 
 sleep 10
 
-echo "http://localhost:8080/tapestry5-hotel-booking/signin" > probe.url
+cd
+mkdir log
+touch ~/log/run.log
 
 cd ~/tagbrowser/dist
-java -jar tagsobe.jar http://localhost:8080/tapestry5-hotel-booking/signin
+java -jar tagsobe.jar http://localhost:8080/tapestry5-hotel-booking/signin | tee ~/log/run.log
+
+sudo service tomcat6 stop
+
+mail -s "tagsobe result" sauvette@objectcode.de <  ~/log/run.log
+
+
+cd
 
