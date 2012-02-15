@@ -3,6 +3,7 @@
 
 sudo yum -y install git
 sudo yum -y install java-1.6.0-openjdk-devel
+export JAVA_HOME=/usr/lib/jvm/java-openjdk
 sudo yum -y install tomcat6-webapps
 sudo yum -y install mysql
 sudo yum -y install mysql-server
@@ -47,11 +48,11 @@ mkdir log
 touch ~/log/run.log
 
 cd ~/tagbrowser/dist
-java -jar tagsobe.jar http://localhost:8080/tapestry5-hotel-booking/signin | tee ~/log/run.log
+java  -Dfmt=java -jar tagsobe.jar http://localhost:8080/tapestry5-hotel-booking/signin | tee ~/log/run.log
 
 sudo service tomcat6 stop
 
-mail -s "tagsobe result" sauvette@objectcode.de,viola@objectcode.de <  ~/log/run.log
+mail -s "tagsobe tapestry5-hotel-booking result" sauvette@objectcode.de,viola@objectcode.de <  ~/log/run.log
 
 
 cd
