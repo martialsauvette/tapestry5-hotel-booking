@@ -11,5 +11,5 @@ sudo yum -y erase ant
 cd
 rm -rf *
 
-reboot
+sudo reboot
 
