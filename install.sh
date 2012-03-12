@@ -10,7 +10,7 @@ sudo yum -y install mysql-server
 sudo yum -y install ant
 
 
-git clone git://github.com/martailsauvette/tagbrowser.git
+git clone git://github.com/martialsauvette/tagbrowser.git
 cd tagbrowser
 ant
 cd
@@ -29,7 +29,7 @@ export M2_HOME=~/apache-maven-3.0.4
 export PATH="$PATH:$M2_HOME/bin"
 
 cd
-git clone git://github.com/martailsauvette/tapestry5-hotel-booking.git
+git clone git://github.com/martialsauvette/tapestry5-hotel-booking.git
 
 cd
 cd tapestry5-hotel-booking
