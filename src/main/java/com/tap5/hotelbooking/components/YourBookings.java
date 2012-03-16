@@ -1,5 +1,6 @@
 package com.tap5.hotelbooking.components;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.tapestry5.annotations.OnEvent;
@@ -44,10 +45,11 @@ public class YourBookings
     	if(!authenticator.isLoggedIn()){
     		return false;
     	}
-        bookings = crudDao.findWithNamedQuery(
-                Booking.BY_USERNAME,
-                QueryParameters.with("username", authenticator.getLoggedUser().getUsername())
-                        .parameters());
+//        bookings = crudDao.findWithNamedQuery(
+//                Booking.BY_USERNAME,
+//                QueryParameters.with("username", authenticator.getLoggedUser().getUsername())
+//                        .parameters());
+        bookings= new ArrayList<Booking>();
         return bookings.size() > 0 ? true : false;
     }
 

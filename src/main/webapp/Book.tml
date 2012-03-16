@@ -87,7 +87,7 @@
 	</t:block>
 	
 	<t:block t:id="confirmBlock">
-		<div class="booking-details" t:type="beandisplay" t:object="booking" t:include="checkinDate,checkoutDate,creditCardNumber,total">
+		<div class="booking-details" t:type="beandisplay" t:object="booking" t:include="checkinDate,checkoutDate,creditCardNumber,creditCardExpiryMonth,creditCardExpiryYear,total">
 			<p:creditCardNumber>
 				#### #### #### ${securedCardNumber}
 			</p:creditCardNumber>
