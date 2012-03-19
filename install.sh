@@ -57,3 +57,6 @@ mail -s "tagsobe tapestry5-hotel-booking result" sauvette@objectcode.de,viola@ob
 
 cd
 
+cp ~/tapestry5-hotel-booking/uninstall.sh .
+#sh uninstall.sh
+

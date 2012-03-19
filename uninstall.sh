@@ -9,7 +9,7 @@ sudo yum -y erase mysql-server
 sudo yum -y erase ant
 
 cd
-rm -rf *
-
+sudo rm -rf *
+sudo rm -rf /usr/share/tomcat6/webapps/tapestry5*
 sudo reboot
 
